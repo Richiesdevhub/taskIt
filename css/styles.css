@@ -1,0 +1,110 @@
+/* grid-template-columns: repeat(auto-fit, minmax 400px, 1fr)); */
+/* Pseudoselectores */
+:root{
+    --blanco: #fff; /* Custom properties */
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #06e0f8;
+    --gris: #757575;
+    --fuente-principal:3.8rem;
+    --justify: justify;
+}
+html{
+	font-size: 62.5%;
+    box-sizing: border-box;
+}
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", sans-serif;
+    /* background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%); */
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color: var(--primario);
+}
+
+/* Media Query para barra de navegacion*/
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+.main   {
+    padding: 2rem;
+    margin: 1rem 5rem 1rem;
+    /* le da 100 % de la vista */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4"
+    "a5 a6";
+}
+/* Media query para seccion principal main */
+@media (max-width: 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.box{
+    padding: 2rem;
+    text-justify: var(--justify);
+    text-align: var(--justify);
+    border-radius: 2rem;
+    margin: 1rem;
+}
+.boxHeaders{
+    text-justify: center;
+    text-align: center;
+}
+.task{
+    grid-area: a1;
+    background-color: red;
+    
+}
+.bgyellowg{
+    grid-area: a2;
+    background-color: yellowgreen;
+}
+.grupos{
+    grid-area:a3;
+    background-color: yellow;
+}
+.templates{
+    grid-area: a4;
+    background-color: var(--secundario);
+}
+.repeticiones{
+    grid-area: a5;
+    background-color: sandybrown;
+}
+.updates{
+    grid-area:a6;
+    background-color: magenta;
+}
