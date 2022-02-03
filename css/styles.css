@@ -111,7 +111,7 @@
         background-color: yellowgreen;
     }
     
-    .grupos {
+    .bgyellow {
         grid-area: a3;
         background-color: yellow;
     }
@@ -167,7 +167,7 @@
         .task-bg {
             display: grid;
             grid-gap: .3rem;
-            grid-template-columns: repeat(auto-fit, 20rem);
+            grid-template-columns: repeat(auto-fit, 30rem);
             text-align: center;
         }
     }
