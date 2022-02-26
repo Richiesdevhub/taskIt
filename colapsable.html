@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de colapsable</title>
+    <style>
+        .panel {
+            padding-left: 30px;
+            color: #fff;
+            background-color: #11a;
+            border-radius: 15px;
+        }
+        
+        .panel:hover {
+            cursor: pointer;
+        }
+        
+        .content {
+            padding: 0px 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel collapsible">
+        Tarea: hacer el colapsable.
+    </div>
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In perferendis temporibus eligendi provident commodi quae id, praesentium consequuntur, sequi esse iusto! Corrupti eligendi sit dolorum ipsa, doloremque molestiae dicta, atque doloribus nobis consectetur
+        eum.
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (this.classList.contains('active')) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
