@@ -1,6 +1,6 @@
-const button = document.getElementById('button');
+const plus = document.getElementById('plus');
 const main = document.getElementById('main');
-button.addEventListener('click', function() {
+plus.addEventListener('click', function() {
     const upperDiv = document.createElement('div');
     upperDiv.classList.add('panel');
     upperDiv.classList.add('collapsible');
