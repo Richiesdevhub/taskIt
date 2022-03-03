@@ -1,6 +1,9 @@
+// const form = document.getElementById('form');
+const input = document.getElementById('input');
 const plus = document.getElementById('plus');
 const main = document.getElementById('main');
 plus.addEventListener('click', function() {
+    let taskText = input.value;
     const upperDiv = document.createElement('div');
     upperDiv.classList.add('panel');
     upperDiv.classList.add('collapsible');
@@ -9,12 +12,14 @@ plus.addEventListener('click', function() {
     descriptionDiv.classList.add('content');
     const numTareas = document.querySelectorAll('.panel');
     if (numTareas.length === 0) {
-        upperDiv.innerText = 'Nueva tarea';
+        // upperDiv.innerText = 'Nueva tarea';
+        upperDiv.innerText = taskText;
         main.appendChild(upperDiv);
         upperDiv.appendChild(descriptionDiv);
         // upperDiv.nextElementSibling.removeEventListener('click', mostrar);
     } else {
-        upperDiv.innerText = 'Nueva tarea' + " " + numTareas.length;
+        // upperDiv.innerText = 'Nueva tarea' + " " + numTareas.length;
+        upperDiv.innerText = taskText;
         main.insertBefore(upperDiv, numTareas[0])
         upperDiv.appendChild(descriptionDiv);
         // upperDiv.nextElementSibling.removeEventListener('click', mostrar);
@@ -45,3 +50,16 @@ function activeToggle() {
     }
     console.log(!this.classList.contains('active'))
 }
+
+/****************agarrar textto de form****************************/
+// const form = document.getElementById('form');
+// const input = document.getElementById('input');
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     addTask();
+// });
+
+// function addTask(task) {
+//     let taskText = input.value;
+//     console.log(taskText);
+// }
