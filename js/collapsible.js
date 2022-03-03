@@ -1,21 +1,23 @@
 function show() {
     var coll = document.getElementsByClassName("collapsible");
     var i;
-    var content = document.getElementsByClassName("content");
 
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            let content = this.firstElementChild;
-            console.log('content')
+            let child = this.firstElementChild;
+            console.log(child);
+            console.log(i);
             if (this.classList.contains('active')) {
 
-                content.style.display = 'block';
-            } else {
-
-                content.style.display = 'none';
+                child.style.display = 'block';
             }
+            if (!this.classList.contains('active')) {
+
+                child.style.display = 'none';
+            }
+            console.log(!this.classList.contains('active'))
         });
     }
-    console.log(content.length);
+
 }
