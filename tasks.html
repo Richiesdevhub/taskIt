@@ -18,20 +18,22 @@
             <a href="#">Tutoriales</a>
         </nav>
     </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <div class="flexi">
+        <svg class="flexi" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <circle cx="12" cy="12" r="9" />
         <line x1="9" y1="12" x2="15" y2="12" />
         <line x1="12" y1="9" x2="12" y2="15" />
       </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="flexi" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <circle cx="12" cy="12" r="9" />
         <line x1="9" y1="12" x2="15" y2="12" />
       </svg>
-    <div>
-        <form id="form"><input type="text" id='input' placeholder="Entra la tarea"></form>
+        <!-- <form id="form" class="flexi"> -->
+        <form id="form" class='down'><input type="text" id='input' placeholder="Entra la tarea" autocomplete='off'></form>
+        <!-- </form> -->
+        <h3 id="h3"> número de tareas : 0</h3>
     </div>
     <div id="main">
         <button id="plus">+</button> <button id="button">-</button>
@@ -39,7 +41,7 @@
 
     <!-- <div class="panel collapsible">
         <span>Tarea: hacer el colapsable</span>
-        <span style="float: right;">
+    <span style="float: right;">
             <svg xmlns=" http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-settings " width="12 " height="12 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
             <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
             <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724

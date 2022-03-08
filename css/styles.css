@@ -47,6 +47,22 @@
         background-color: #a1a1a1;
     }
     
+    .flexi {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;
+    }
+    
+    .down {
+        padding-top: 1rem;
+        transform: scaleY(1.5);
+    }
+    
+    .up {
+        padding-bottom: 1rem;
+    }
+    
     .sub {
         max-width: 100px;
     }

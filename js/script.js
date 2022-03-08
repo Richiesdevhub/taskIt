@@ -2,8 +2,11 @@
 const input = document.getElementById('input');
 const plus = document.getElementById('plus');
 const main = document.getElementById('main');
-plus.addEventListener('click', function() {
+const h3 = document.getElementById('h3');
+form.addEventListener('submit', (e) => { //Empieza el evento para form
+    e.preventDefault();
     let taskText = input.value;
+    input.value = "";
     const upperDiv = document.createElement('div');
     upperDiv.classList.add('panel');
     upperDiv.classList.add('collapsible');
@@ -14,12 +17,14 @@ plus.addEventListener('click', function() {
     if (numTareas.length === 0) {
         // upperDiv.innerText = 'Nueva tarea';
         upperDiv.innerText = taskText;
+        h3.innerText = " numero de tareas : " + (numTareas.length + 1);
         main.appendChild(upperDiv);
         upperDiv.appendChild(descriptionDiv);
         // upperDiv.nextElementSibling.removeEventListener('click', mostrar);
     } else {
         // upperDiv.innerText = 'Nueva tarea' + " " + numTareas.length;
         upperDiv.innerText = taskText;
+        h3.innerText = "numero de tareas : " + (numTareas.length + 1);
         main.insertBefore(upperDiv, numTareas[0])
         upperDiv.appendChild(descriptionDiv);
         // upperDiv.nextElementSibling.removeEventListener('click', mostrar);
